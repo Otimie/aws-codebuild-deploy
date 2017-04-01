@@ -4,6 +4,6 @@ phases:
   post_build:
     commands:
       - zip HelloWorld.zip index.js
-  artifacts:
-    files:
-      - HelloWorld.zip
+artifacts:
+  files:
+    - HelloWorld.zip
