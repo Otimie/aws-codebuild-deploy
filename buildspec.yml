@@ -1,9 +1,9 @@
 version: 0.1
 
 phases:
-  build:
-    commands:
   post_build:
+    commands:
+      - zip HelloWorld.zip index.js
   artifacts:
     files:
-      - artifacts/HelloWorld.zip
+      - HelloWorld.zip
