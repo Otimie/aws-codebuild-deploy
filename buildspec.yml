@@ -1,6 +1,9 @@
 version: 0.1
 
 phases:
+  install:
+    commands:
+      - npm install --prefix src
   post_build:
     commands:
       - zip -r -j HelloWorld.zip src
