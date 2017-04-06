@@ -1,3 +1,3 @@
-exports.handler = function(event, context) {
-	context.succeed("Hello World!");
+exports.handler = function(event, context, callback) {
+	context.succeed("Hello World! From GitHub");
 };
