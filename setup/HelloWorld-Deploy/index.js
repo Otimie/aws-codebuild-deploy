@@ -1,6 +1,6 @@
 var AWS = require('aws-sdk');
 
-exports.handler = function(event, context) {
+exports.handler = function(event, context, callback) {
 
 	var region = "us-east-1"
 	var s3Key = event.Records[0].s3.object.key;
@@ -19,10 +19,10 @@ exports.handler = function(event, context) {
 
 	lambda.updateFunctionCode(parameters, function(error, data) {
 		if (error) {
-			context.fail(error);
+			callback(error);
 		}
 		else {
-			context.succeed(data);
+			callback(null, data);
 		}
 	});
 };
