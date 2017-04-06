@@ -7,9 +7,9 @@ exports.handler = (event, context, callback) => {
     var params = {
         projectName: 'HelloWorld',
     };
-    codebuild.startBuild(params, function(err, data) {
-        if (err) {
-            callback(null, 'Error');
+    codebuild.startBuild(params, function(error, data) {
+        if (error) {
+            callback(error);
         }
         else {
             callback(null, 'Success');
