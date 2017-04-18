@@ -1,3 +1,3 @@
 exports.handler = function(event, context, callback) {
-	callback(null, "Hello World! From GitHub");
+	callback(null, "kiohyvgyugHello World! From GitHub");
 };
